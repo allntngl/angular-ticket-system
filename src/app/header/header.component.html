@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+
+  <ngx-spinner name="spinnerName" type="spinnerType"></ngx-spinner>
+
+
+
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CloudStaff</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a
+            [routerLink]="'/'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            >Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="'aboutus'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            >About Us
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="'contactus'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            >Contact Us
+          </a>
+        </li>
+
+        <li class="nav-item" #login *ngIf="isLogin == false">
+          <a
+            [routerLink]="'login'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            >login
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="isLogin == true" (click)="logoutUser()">
+          <a class="nav-link">LogOut</a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="'profilepage'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            [ngClass]="{ 'd-none': isLogin == false }"
+            >Profile
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="'tickets'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            [ngClass]="{ 'd-none': isLogin == false }"
+            >Tickets
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
