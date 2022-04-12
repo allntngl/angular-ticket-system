@@ -1,0 +1,31 @@
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light"><b>USERS</b></h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <a
+          class="col"
+          *ngFor="let user of users"
+          [routerLink]="'/users/' + user.id"
+        >
+          <div class="card border-dark mb-3" style="max-width: 18rem">
+            <div class="card-header">
+              <h1>{{ user.name }}</h1>
+            </div>
+            <div class="card-body text-dark">
+              <h5 class="card-title">Email: {{ user.email }}</h5>
+              Role : {{ user.role }}
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>

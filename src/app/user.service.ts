@@ -5,11 +5,9 @@ import { AppAuthService } from './app-auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class TicketsService {
+export class UserService {
 
-  url = 'http://localhost:8000/api/tickets/';
-
-
+  url = 'http://localhost:8000/api/users/';
 
   constructor(private _httpClient:HttpClient, private _appAuthService:AppAuthService) { }
 
@@ -20,13 +18,4 @@ export class TicketsService {
     });
   }
 
-
-  getById(id : string) : any{
-    const token = this._appAuthService.getSession();
-    return this._httpClient.get(this.url + id ,{
-      headers: new HttpHeaders().set("Authorization" , "Bearer " + token)
-    });
-
-
-}
 }

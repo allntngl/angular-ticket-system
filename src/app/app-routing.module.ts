@@ -1,3 +1,4 @@
+import { UsersComponent } from './users/users.component';
 import { ChildTicketComponent } from './tickets/child/child.component';
 import { ErrorComponent } from './error/error.component';
 import { TicketsComponent } from './tickets/tickets.component';
@@ -42,6 +43,16 @@ const routes: Routes = [
 
 
   },
+
+  {
+    path: 'users',
+    component: UsersComponent,
+    canActivate: [AppGuardGuard]
+
+
+  },
+
+
 
 
   {

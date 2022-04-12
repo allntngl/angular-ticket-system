@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChildTicketComponent } from './tickets/child/child.component';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { UsersComponent } from './users/users.component';
+import { GlobalComponent } from './global/global.component';
 
 
 
@@ -37,6 +39,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     TicketsComponent,
     ErrorComponent,
     ChildTicketComponent,
+    UsersComponent,
+    GlobalComponent,
 
 
 

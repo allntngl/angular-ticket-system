@@ -85,6 +85,17 @@
             >Tickets
           </a>
         </li>
+
+        <li class="nav-item">
+          <a
+            [routerLink]="'users'"
+            routerLinkActivate="'activate'"
+            class="nav-link"
+            href="#"
+            [ngClass]="{ 'd-none': isLogin == false }"
+            >User
+          </a>
+        </li>
       </ul>
     </div>
   </div>
